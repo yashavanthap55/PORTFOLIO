@@ -1,7 +1,7 @@
 .Home{
     position: relative;
     overflow: hidden;
-    font-family:'Mukta';
+    font-family: "Mukta", sans-serif;
 }
 .name{
     padding: 0 10%;
