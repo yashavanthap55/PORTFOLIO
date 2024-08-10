@@ -25,8 +25,8 @@ function Navbar({ isDarkMode, toggleTheme, setCursorOpacity }) {
       style={{ color: isDarkMode ? '#fff' : '#000' }}
     >
       <div className="left-text">
-        <Link to='/'>
-          <h1 className={location.pathname === '/' ? 'showe' : 'hovere'}>y.</h1>
+        <Link to='/PORTFOLIO'>
+          <h1 className={location.pathname === '/PORTFOLIO' ? 'showe' : 'hovere'}>y.</h1>
         </Link>
       </div>
       <div className='right-text'>
