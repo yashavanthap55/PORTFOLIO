@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar.jsx';
 import Home from './pages/Page1/Home';
@@ -15,6 +15,7 @@ function App() {
   const [cursorOpacity, setCursorOpacity] = useState(1);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [certificateInView, setcertificateInView] = useState(false);
+
 
   useEffect(() => {
     const locoScroll = new LocomotiveScroll({
@@ -47,7 +48,7 @@ function App() {
         <LandingPage />
         <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} setCursorOpacity={setCursorOpacity} />
         <Routes>
-          <Route path="/" element={<Home isDarkMode={isDarkMode} cursorOpacity={cursorOpacity} />} />
+          <Route path="/PORTFOLIO/" element={<Home isDarkMode={isDarkMode} cursorOpacity={cursorOpacity} />} />
           <Route path="/about" element={<About isDarkMode={isDarkMode} />} />
           <Route path="/certificate" element={<Certificate isDarkMode={isDarkMode} setcertview={setcertview} />} />
           <Route path="/project" element={<Project isDarkMode={isDarkMode} />} />

@@ -8,5 +8,5 @@ import rinnegan from './sharingan/rinnegan.png'
 
 
 
-const sharingan=[amaterasu,rinnegan,madara,tsukuyomi,kamui];
+const sharingan=[rinnegan,amaterasu,madara,tsukuyomi,kamui];
 export default sharingan;

@@ -177,7 +177,7 @@ span{
     transform: translate(-50%, -50%); 
     transition: all cubic-bezier(.41,.2,.75,.78);
     z-index: 9;
-    cursor: none;
+    cursor: pointer;
 }
 .about-btn{
     position: relative;

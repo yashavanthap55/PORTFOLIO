@@ -85,8 +85,8 @@ function Home({ isDarkMode, cursorOpacity }) {
                     className={isRotating ? 'rotate' : ''}
                     src={sharingan[change]}
                     style={{
-                      filter: change === 3 ? 'drop-shadow(0 0 20px #F7F7FF) drop-shadow(0 0 50px #F7F7FF)' : change === 1 ? 'drop-shadow(0 0 10px purple ) drop-shadow(0 0 15px purple)' : '',
-                      scale: change === 1 ? '3.4' : '',
+                      filter: change === 3 ? 'drop-shadow(0 0 20px red) drop-shadow(0 0 50px red)' : change === 0 ? 'drop-shadow(0 0 10px purple ) drop-shadow(0 0 15px purple)' : '',
+                      scale: change === 0 ? '3.4' : '',
                       animation: 'spinscale 300ms cubic-bezier(0.4, 0, 0.2, 1)',
                     }}
                     alt=""
@@ -101,8 +101,8 @@ function Home({ isDarkMode, cursorOpacity }) {
                     className={isRotating ? 'rotate' : ''}
                     src={sharingan[change]}
                     style={{
-                      filter: change === 3 ? 'drop-shadow(0 0 20px #F7F7FF) drop-shadow(0 0 50px #F7F7FF)' : change === 1 ? 'drop-shadow(0 0 10px purple ) drop-shadow(0 0 15px purple)' : '',
-                      scale: change === 1 ? '3.4' : '',
+                      filter: change === 3 ? 'drop-shadow(0 0 20px red) drop-shadow(0 0 50px red)' : change === 0 ? 'drop-shadow(0 0 10px purple ) drop-shadow(0 0 15px purple)' : '',
+                      scale: change === 0 ? '3.4' : '',
                       animation: 'spinscale 300ms cubic-bezier(0.4, 0, 0.2, 1)',
                     }}
                     alt=""
