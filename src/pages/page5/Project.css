@@ -1,5 +1,5 @@
 .Project {
-    padding: 15vh 30vh;
+    padding: 15vh 18vw;
     height: auto;
     width: 100vw;
     margin: 0 auto;
@@ -16,7 +16,7 @@
     }
   }
   .Project-absolute{
-    padding: 15vh 30vh;
+    padding: 15vh 18vw;
     height: auto;
     width: 100vw;
     top:0;
@@ -76,3 +76,11 @@
   .Project-absolute .proj-list .proj{
     border: none;
   }
+@media only screen and (max-width: 790px){
+  .Project{
+    padding: 17vh 15vw 0 15vw;
+  }
+  .Project h1{
+    font-size: 5vw;
+  }
+}

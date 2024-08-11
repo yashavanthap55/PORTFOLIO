@@ -13,7 +13,7 @@ const footer = ({isDarkMode}) => {
           <a href="https://www.instagram.com/rogue_rockyy._/?next=%2F"><div className="image-contain"><img src={isDarkMode?icons[0]:icons[1]} alt="" /></div></a>
           <a href="https://www.linkedin.com/in/yashavantha-p-a66607296/"><div className="image-contain"><img src={isDarkMode?icons[2]:icons[3]} alt="" /></div></a>
           <a href="https://github.com/YASHAVANTHAP"><div className="image-contain"><img src={isDarkMode?icons[4]:icons[5]} alt="" /></div></a>
-          <a href=""><div className="image-contain"><img src={isDarkMode?icons[6]:icons[7]} alt="" /></div></a>
+          <a href="https://x.com/Yashavanth67374"><div className="image-contain"><img src={isDarkMode?icons[6]:icons[7]} alt="" /></div></a>
         </div>
       </div>
     </div>

@@ -65,7 +65,7 @@ const Project = ({ isDarkMode }) => {
             <div style={{position:'absolute',height:'60px',color:'#fff',width:'60px',backgroundColor:'rgb(222, 29, 141)',borderRadius:'50%',left:'50%',top:'50%',transform:'translate(-50%,-50%)',textAlign:'center',padding:'15px 0'}}>View</div>
           </div>
 
-        <h1 style={{ fontWeight: '900', fontSize: '3vw', letterSpacing: '-2px' }}>Projects</h1>
+        <h1>Projects</h1>
         <h4 style={{ color: isDarkMode ? '#9CA3AF' : '#6B7280' }}>Here are some projects I did in college</h4>
         <div className="proj-list" >
           <div className="proj" style={{ borderBottomColor: isDarkMode ? '#fff' : '#9CA3AF',scale:hoveredProject=='0'?'1.1':'1'}} data-no='1'  >

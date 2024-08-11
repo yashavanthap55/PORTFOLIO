@@ -23,8 +23,8 @@
         gsap.to(selector, {
           scrollTrigger: {
             trigger: selector,
-            start: "top bottom",
-            end: "bottom top",
+            start: "top 80%",
+            end: "bottom 40%",
             scrub: true,
           },
           color: scrollColor,

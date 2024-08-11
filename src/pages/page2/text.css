@@ -43,10 +43,21 @@
   top: 0;
   margin-top: 10px;
 }
-
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
   .container h1{
-    font-size: 72px;
+    font-size: 5vw;
     font-weight: 600;
     letter-spacing: -1.8px;
-    line-height: 95px;
+    line-height: 6vw;
+  }
+  @media   only screen and (max-width:790px){
+ .container h1{
+  font-size: 6vw;
+  line-height: 7vw;
+  letter-spacing: -1px;
+ }    
   }

@@ -111,4 +111,42 @@
     font-size: 1.4vw;
     margin-top: 3px;
   }
-  
+  @media only screen and (max-width: 790px){
+    .About{
+      padding-top: 15vh;
+    }
+    .myname{
+      display: flex;
+      flex-direction: column-reverse;
+      position: relative;
+     align-items: center;
+    }
+    .lefttext{
+      width: auto;
+    }
+    .lefttext h1{
+      text-align: center;
+      font-size: larger;
+      letter-spacing: 0px;
+    }
+    .lefttext h4{
+      text-align: center;
+      justify-content: center;
+    }
+    .para p{
+      margin-top: 20px;
+      font-size: 2.5vw;
+    }
+    .skills h3{
+      font-size: 4vw;
+    }
+    .year h4{
+   font-size: large;
+    }
+    .year ul li{
+      font-size: 2.3vw;
+    }
+    .skills ul li{
+      font-size: large;
+    }
+  }
