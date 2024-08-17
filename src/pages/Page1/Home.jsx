@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Home.css';
 import Text from './../page2/text.jsx';
+import Banner from '../Page3/marque.jsx';
 import { Link } from 'react-router-dom';
 import sharingan from '../../assets/sharingan.js';
-
+import gsap from 'gsap';
 
 function Home({ isDarkMode, cursorOpacity }) {
   const [rotate, setRotate] = useState(0);
-  const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
   const [isSpinning, setIsSpinning] = useState(false);
   const [change, setChange] = useState(0);
@@ -38,27 +38,36 @@ function Home({ isDarkMode, cursorOpacity }) {
   const notclicked = () => {
     setClick(false);
   };
-
   useEffect(() => {
     const handleMouseMove = (e) => {
       const rect = homeRef.current.getBoundingClientRect();
       let offsetX = e.clientX - rect.left;
       let offsetY = e.clientY - rect.top;
-
+  
       offsetX = Math.max(0, Math.min(offsetX, rect.width));
       offsetY = Math.max(0, Math.min(offsetY, rect.height));
-
-      setMouseX(offsetX);
       setMouseY(offsetY);
-
+  
+      gsap.to(".cursor", {
+        left: `${offsetX}px`,
+        top: `${offsetY}px`,
+        duration: 0.7,
+        ease:'back.out(1)'
+      });
+  
       const X = e.clientX - window.innerWidth / 2;
       const Y = e.clientY - window.innerHeight / 2;
       const angle = Math.atan2(Y, X) * (180 / Math.PI);
       setRotate(angle - 180);
     };
-
+  
     homeRef.current.addEventListener('mousemove', handleMouseMove);
+  
+    return () => {
+      homeRef.current.removeEventListener('mousemove', handleMouseMove);
+    };
   }, []);
+  
 
   return (
     <>
@@ -67,11 +76,10 @@ function Home({ isDarkMode, cursorOpacity }) {
           className="cursor"
           onClick={handleClick}
           style={{
-            top: `${mouseY}px`,
-            left: `${mouseX}px`,
-            opacity: click ? '0' : cursorOpacity,
+            opacity: click || mouseY>700? '0' : cursorOpacity,
             backgroundColor: isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.3)',
             color: isDarkMode ? '#F7F7FF' : '#000',
+            transition:'opacity 0.5s ease'
           }}
         >
           <p>Click</p>
@@ -129,8 +137,8 @@ function Home({ isDarkMode, cursorOpacity }) {
         </div>
         <div className="about-btn"  style={{color:isDarkMode?'#fff':'000'}}    onClick={scroll} onMouseMove={clicked} onMouseLeave={notclicked}>↓</div>
       </div>
-      <Text isDarkMode={isDarkMode}/>
-
+      <Text isDarkMode={isDarkMode}/>        
+      <Banner isDarkMode={isDarkMode}/>
     </>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import project from './../../assets/project.js';
 import './Project.css';
+import gsap from 'gsap';
 
 
 
@@ -21,6 +22,12 @@ const Project = ({ isDarkMode }) => {
       const offsetY = e.clientY - rect.top - 150;
       setOffsetX(offsetX);
       setOffsetY(offsetY);
+      gsap.to(curseRef.current,{
+        top: `${offsetY}px`,
+        left: `${offsetX}px`,
+        duration:'0.7',
+        ease:'back.out(1)'
+      });
     };
 
     projectRef.current.addEventListener('mousemove', handleMouseMove);
@@ -55,8 +62,6 @@ const Project = ({ isDarkMode }) => {
             className="outerdiv"
             ref={curseRef}
             style={{
-              top: `${offsetY}px`,
-              left: `${offsetX}px`,
               backgroundImage: `url(${project[hoveredProject]})`,
               backgroundSize: 'cover',
               transform:mouseenter?'scale(1)':'scale(0)',
@@ -66,7 +71,7 @@ const Project = ({ isDarkMode }) => {
           </div>
 
         <h1>Projects</h1>
-        <h4 style={{ color: isDarkMode ? '#9CA3AF' : '#6B7280' }}>Here are some projects I did in college</h4>
+        <h4 style={{ color: isDarkMode ? '#9CA3AF' : '#6B7280' }}>Here are some projects I worked upon</h4>
         <div className="proj-list" >
           <div className="proj" style={{ borderBottomColor: isDarkMode ? '#fff' : '#9CA3AF',scale:hoveredProject=='0'?'1.1':'1'}} data-no='1'  >
             <h2>Snake Game</h2>

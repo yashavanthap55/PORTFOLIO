@@ -1,63 +1,61 @@
 .text,.text2 {
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    border-top-left-radius: 10%;
-    border-top-right-radius: 10%;
-    padding: 15vh 20vw;
-    cursor: none;
-  }
-  
-  .container {
-    height: 100%;
-    width: 100%;
-  }
-  
-  .container h1 {
-    font-size: 72px;
-    font-weight: 600;
-    letter-spacing: -1.8px;
-    line-height: 95px;
-  }
-  
-  .blend {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: #fff;
-    mix-blend-mode: difference;
-    transition: transform 0.2s ease;
-  }
-  
-  .text:hover .blend {
-    transform: scale(5);
-  }
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 15vh 20vw;
+  cursor: none;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+.container h1 {
+  font-size: 72px;
+  font-weight: 600;
+  letter-spacing: -1.8px;
+  line-height: 95px;
+}
+
+.blend {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  mix-blend-mode: difference;
+  transition: transform 0.2s ease;
+}
+
+.text:hover .blend {
+  transform: scale(5);
+}
 
 .text2{
-  position: absolute;
-  top: 0;
-  margin-top: 10px;
+position: absolute;
+top: 0;
+margin-top: 10px;
 }
 .container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
 }
-  .container h1{
-    font-size: 5vw;
-    font-weight: 600;
-    letter-spacing: -1.8px;
-    line-height: 6vw;
-  }
-  @media   only screen and (max-width:790px){
- .container h1{
-  font-size: 6vw;
-  line-height: 7vw;
-  letter-spacing: -1px;
- }    
-  }
+.container h1{
+  font-size: 5vw;
+  font-weight: 600;
+  letter-spacing: -1.8px;
+  line-height: 6vw;
+}
+@media   only screen and (max-width:790px){
+.container h1{
+font-size: 6vw;
+line-height: 7vw;
+letter-spacing: -1px;
+}    
+}

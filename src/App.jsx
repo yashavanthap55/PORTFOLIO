@@ -3,12 +3,11 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar.jsx';
 import Home from './pages/Page1/Home';
 import Footer from './pages/Footer/footer.jsx'
-import Certificate from './pages/page4/Certificate.jsx'
-import Project from './pages/page5/Project.jsx';
-import About from './pages/Page3/About.jsx';
+import Certificate from './pages/Certificates/Certificate.jsx';
+import Project from './pages/Projects/Project.jsx';
+import About from './pages/About/About.jsx';
 import LandingPage from './pages/landing_page/landing_page.jsx';
 import NotFound from './components/Notfound/notfound.jsx';
-import './App.css';
 import LocomotiveScroll from 'locomotive-scroll';
 
 function App() {
@@ -44,8 +43,8 @@ function App() {
 
   return (
     <Router>
-      <div className="screen">
-        <LandingPage />
+      <div className="screen" style={{backgroundColor:isDarkMode?'#fff':'#000'}}>
+        {/* <LandingPage /> */}
         <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} setCursorOpacity={setCursorOpacity} />
         <Routes>
           <Route path="/PORTFOLIO/" element={<Home isDarkMode={isDarkMode} cursorOpacity={cursorOpacity} />} />
