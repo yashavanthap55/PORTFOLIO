@@ -7,6 +7,7 @@
     overflow: hidden;
     display: flex;
     gap: 15vw;
+    overflow-x: hidden;
     flex-direction: column;
     animation: fadestart 0.5s ease-in-out;
   }

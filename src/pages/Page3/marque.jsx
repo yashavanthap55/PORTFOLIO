@@ -30,9 +30,10 @@ const Marque = ({ isDarkMode }) => {
       trigger: '.marque',
       scroller:'body',
       start: '-70% 0%',
-      end: '-60% -100%',
+      end: '-60% -50%',
+      // markers:true,
       // pin:true,
-      scrub:5,
+      scrub:3,
     },
     transform:'translateX(-250%)',
     ease: "power5.out",
@@ -93,10 +94,10 @@ const Marque = ({ isDarkMode }) => {
         <img id='itachi' style={{ filter: isDarkMode?'invert(100%) brightness(120%)':''}}  src={itachi} alt="Itachi" />
       </div>
       <div className="bigtext">
-        <h1 style={{color:isDarkMode?'#fff':'#000'}}>Modern</h1>
+        <h1 style={{color:isDarkMode?'#fff':'#000'}}>Fantasy</h1>
       </div>
       <div className="bigtext-stroke" style={{position:'absolute',zIndex:9}}>
-        <h1 style={{WebkitTextStrokeWidth:'1px',color:'transparent',WebkitTextStrokeColor:isDarkMode?'#000':'#fff'}}>Modern</h1>
+        <h1 style={{WebkitTextStrokeWidth:'1px',color:'transparent',WebkitTextStrokeColor:isDarkMode?'#000':'#fff'}}>Fantasy</h1>
       </div>
       <div className="overlay" ref={svgRef}>
         <svg xmlns="http://www.w3.org/2000/svg">

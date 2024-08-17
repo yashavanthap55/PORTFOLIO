@@ -43,7 +43,7 @@ function App() {
 
   return (
     <Router>
-      <div className="screen" style={{backgroundColor:isDarkMode?'#fff':'#000'}}>
+      <div className="screen" style={{backgroundColor:isDarkMode?'#fff':'#000',msOverflowX:'hidden'}}>
         {/* <LandingPage /> */}
         <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} setCursorOpacity={setCursorOpacity} />
         <Routes>

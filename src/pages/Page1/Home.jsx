@@ -38,33 +38,59 @@ function Home({ isDarkMode, cursorOpacity }) {
   const notclicked = () => {
     setClick(false);
   };
+
   useEffect(() => {
     const handleMouseMove = (e) => {
       const rect = homeRef.current.getBoundingClientRect();
       let offsetX = e.clientX - rect.left;
       let offsetY = e.clientY - rect.top;
-  
+
       offsetX = Math.max(0, Math.min(offsetX, rect.width));
       offsetY = Math.max(0, Math.min(offsetY, rect.height));
       setMouseY(offsetY);
-  
+
       gsap.to(".cursor", {
         left: `${offsetX}px`,
         top: `${offsetY}px`,
         duration: 0.7,
-        ease:'back.out(1)'
+        ease: 'back.out(1)',
       });
-  
+
       const X = e.clientX - window.innerWidth / 2;
       const Y = e.clientY - window.innerHeight / 2;
       const angle = Math.atan2(Y, X) * (180 / Math.PI);
       setRotate(angle - 180);
     };
-  
+
+    const handleTouchMove = (e) => {
+      const touch = e.touches[0];
+      const rect = homeRef.current.getBoundingClientRect();
+      let offsetX = touch.clientX - rect.left;
+      let offsetY = touch.clientY - rect.top;
+
+      offsetX = Math.max(0, Math.min(offsetX, rect.width));
+      offsetY = Math.max(0, Math.min(offsetY, rect.height));
+      setMouseY(offsetY);
+
+      gsap.to(".cursor", {
+        left: `${offsetX}px`,
+        top: `${offsetY}px`,
+        duration: 0.7,
+        ease: 'back.out(1)',
+      });
+
+      const X = touch.clientX - window.innerWidth / 2;
+      const Y = touch.clientY - window.innerHeight / 2;
+      const angle = Math.atan2(Y, X) * (180 / Math.PI);
+      setRotate(angle - 180);
+    };
+
     homeRef.current.addEventListener('mousemove', handleMouseMove);
-  
+    homeRef.current.addEventListener('touchmove', handleTouchMove);
+
     return () => {
       homeRef.current.removeEventListener('mousemove', handleMouseMove);
+      homeRef.current.removeEventListener('touchmove', handleTouchMove);
     };
   }, []);
   

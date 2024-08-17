@@ -2,6 +2,7 @@
     position: relative;
     font-family: "Mukta", sans-serif;
     z-index: 9;
+    overflow-x: hidden;
 }
 .name{
     padding: 0 10%;
@@ -249,7 +250,7 @@ scale: 1.5;
         bottom:44%;
     }
     .cursor{
-        display: none;
+        scale: 0.8;
     }
     .about{
     bottom:-7vh;     

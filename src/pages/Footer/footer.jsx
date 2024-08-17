@@ -3,6 +3,7 @@ import './footer.css'
 import icons from '../../assets/icons'
 
 const footer = ({isDarkMode}) => {
+  
   return (
     <div className='footer' style={{backgroundColor:isDarkMode?'#000':'#f7f7ff'}}>
       <div className="left" style={{color:isDarkMode?'#fff':'#000'}}>
