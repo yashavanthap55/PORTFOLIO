@@ -61,7 +61,7 @@ const Glitch = () => {
           width: '100vw',
           zIndex: '99',
           position: 'absolute',
-          background: '#f40000',
+          background: '#DE1D8D',
           top: '0',
           transition: 'top 1s ease-in-out',
         }}
