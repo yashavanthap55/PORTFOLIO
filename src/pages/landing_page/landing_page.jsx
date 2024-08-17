@@ -16,7 +16,7 @@ const Glitch = () => {
       if (landing_page2Ref.current) {
         landing_page2Ref.current.style.top = '-100vh';
       }
-    }, 3010); 
+    }, 3008); 
 
     return () => {
       clearTimeout(timer1);
@@ -61,9 +61,9 @@ const Glitch = () => {
           width: '100vw',
           zIndex: '99',
           position: 'absolute',
-          background: '#DE1D8D',
+          background: '#f40000',
           top: '0',
-          transition: 'top 1s ease-in-out',
+          transition: 'top 0.8s ease-in-out',
         }}
       >
       </div>

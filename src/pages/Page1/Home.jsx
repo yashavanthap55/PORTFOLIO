@@ -88,10 +88,7 @@ function Home({ isDarkMode, cursorOpacity }) {
     homeRef.current.addEventListener('mousemove', handleMouseMove);
     homeRef.current.addEventListener('touchmove', handleTouchMove);
 
-    return () => {
-      homeRef.current.removeEventListener('mousemove', handleMouseMove);
-      homeRef.current.removeEventListener('touchmove', handleTouchMove);
-    };
+
   }, []);
   
 
