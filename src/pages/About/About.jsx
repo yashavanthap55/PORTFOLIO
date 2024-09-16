@@ -2,7 +2,7 @@ import React from 'react';
 import './About.css';
 import my_photo from './../../../public/my_img.jpg';
 
-function About({ isDarkMode }) {
+function About({ isDarkMode }) {  
   return (
     <div className='About' style={{ backgroundColor: isDarkMode ? '#000' : '#f7f7ff', color: isDarkMode ? '#fff' : '#000' }}>
       <div className="aabout">
