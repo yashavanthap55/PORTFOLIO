@@ -171,6 +171,7 @@
     .lefttext{
       width: auto;
     }
+    
     .lefttext h1{
       text-align: center;
       font-size: larger;
@@ -195,5 +196,8 @@
     }
     .skills ul li{
       font-size: large;
+    }
+    #imghoveredp{
+      padding: 0;
     }
   }
