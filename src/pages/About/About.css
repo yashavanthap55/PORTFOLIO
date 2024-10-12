@@ -1,3 +1,6 @@
+:root{
+  --img--:0;
+}
 .About {
     height: auto;
     width: 100%;
@@ -76,14 +79,36 @@
     border-radius: 50%;
     width: 4cm;
     height: 4cm;
+    filter: none;
+    backdrop-filter: blur(1px);
     overflow: hidden;
+    transition: all 0.5s cubic-bezier(.37,.14,.19,1.05);
   }
-  
+  .righttext::after{
+    content: 'CLICK';
+    background: linear-gradient(to top,#0f0f0fad,transparent);
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 100%; 
+    left: 0; 
+    opacity: var(--img--);
+    z-index: 1; 
+    pointer-events: none; 
+    transition: top 0.5s cubic-bezier(.37,.14,.19,1.05);
+  }
+  .righttext:hover::after{
+    top:0%;
+  }
   .righttext img {
     object-fit: cover;
     height: 100%;
     width: 100%;
-    filter: grayscale(50%);
+    transition: all 0.5s cubic-bezier(.37,.14,.19,1.05);
   }
   
   .para {
@@ -113,6 +138,26 @@
     font-size: 1.4vw;
     margin-top: 3px;
   }
+  #imghoveredp{
+    border-radius: 10px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform-origin: center; 
+    padding: 2% 25%;
+    transform: translate(-50%, -50%);
+  }
+  #imghoveredc:hover{
+    scale: 1.05;
+    overflow: hidden;
+  }
+
+  #imghoveredc{
+    border-radius: 20%;
+  }
+
   @media only screen and (max-width: 790px){
     .About{
       padding-top: 15vh;

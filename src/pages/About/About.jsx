@@ -1,10 +1,22 @@
-import React from 'react';
+import React, {useEffect, useState } from 'react';
 import './About.css';
 import my_photo from './../../../public/my_img.jpg';
 
 function About({ isDarkMode }) {  
+ const [img,setImg]=useState(false);
+ const imgClick=()=>{
+  setImg(prev=>!prev);
+ };
+ useEffect(()=>{
+  if(img){
+    document.documentElement.style.setProperty('--img--','0');
+  }
+  else{
+   document.documentElement.style.setProperty('--img--','1')
+  }
+ },[img]);
   return (
-    <div className='About' style={{ backgroundColor: isDarkMode ? '#000' : '#f7f7ff', color: isDarkMode ? '#fff' : '#000' }}>
+    <div className='About' style={{ backgroundColor: isDarkMode ? '#000' : '#f7f7ff',color: isDarkMode ? '#fff' : '#000'}}>
       <div className="aabout">
         <div className="myname">
           <div className="lefttext">
@@ -14,8 +26,15 @@ function About({ isDarkMode }) {
             </h4>
             <h4>𖡡 Bengaluru</h4>
           </div>
-          <div className="righttext" style={{ backgroundColor: isDarkMode ? '#1b1b1b' : '#cccccc' }}>
-            <img src={my_photo} alt="Yashavantha P" />
+          <div 
+    className="righttext" 
+    onClick={imgClick} 
+    id={img ? "imghoveredp" : ""}
+    style={{ 
+        backgroundColor: isDarkMode ? '#1b1b1b' : '#cccccc',
+        backgroundImage: isDarkMode ? 'linear-gradient(to right, #000, #000)' : 'linear-gradient(to right, #fff, #fff)' 
+    }}
+>            <img src={my_photo} id={img?"imghoveredc":""} alt="Yashavantha P" />
           </div>
         </div>
         <div className="para">
@@ -50,10 +69,9 @@ function About({ isDarkMode }) {
           </div>
           <h3>Hobbies</h3>
           <ul>
-            <li>Guitar 🎸</li>
-            <li>Sketch ART 🎨</li>
-            <li>Spotify 🎧</li>
-            <li>Video Editing 📽️</li>
+            <li>Playing Guitar 🎸</li>
+            <li>Doing Sketch ART 🎨</li>
+            <li>Listening to music🎧</li>
           </ul>
           <h3>Uses</h3>
           <ul>
