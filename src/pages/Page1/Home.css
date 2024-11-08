@@ -81,15 +81,6 @@
     align-items: center;
     z-index: 2;
 }
-
-@keyframes eyes {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
 .center{
     width:70%;
     height:40%;
@@ -112,7 +103,6 @@
     box-shadow: inset rgb(212, 209, 209) 0px 0px 30px 10px;
     border-bottom-right-radius: 10%;
     aspect-ratio: 1/1;
-    animation :eyes 2.8s ease 3.5s;
     overflow: hidden;
 }
 .right-eye{
@@ -126,7 +116,6 @@
     border-top-right-radius: 20%;
     border-bottom-right-radius: 50%;
     aspect-ratio: 1/1;
-    animation :eyes 2.8s ease 3.5s;
     overflow: hidden;
 }
 .img-container{
@@ -189,7 +178,7 @@ span{
     background-color: transparent;
     text-align: center;
     padding-top: 12px;
-    left:45%;
+    left:47vw;
     bottom: 10vh;
     z-index: 999;
     transition: scale 0.5s ease-in-out;

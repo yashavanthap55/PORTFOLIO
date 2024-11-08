@@ -23,8 +23,8 @@ function Text({ isDarkMode }) {
       gsap.to(selector, {
         scrollTrigger: {
           trigger: selector,
-          start: "50% 80%",
-          end: "bottom 40%",
+          start: "50% 0%",
+          end: "bottom -20%",
           scrub: 5,
           onEnter: () => {
             gsap.to(selector, { color: scrollColor });
