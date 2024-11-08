@@ -1,10 +1,8 @@
 import acoustic from './../assets/project/levitation.jpg'
 import snake from './../assets/project/snake_game.png'
 import emotion from './../assets/project/emotion.png'
-import ecommerse from './../assets/project/e-commerse.png'
+import hospital from './../assets/project/hospital.png'
 
-
-
-const Project=[snake,acoustic,ecommerse,emotion];
+const Project=[hospital,snake,acoustic,emotion];
 
 export default Project;

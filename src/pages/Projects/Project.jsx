@@ -74,20 +74,20 @@ const Project = ({ isDarkMode }) => {
         <h4 style={{ color: isDarkMode ? '#9CA3AF' : '#6B7280' }}>Here are some projects I worked upon</h4>
         <div className="proj-list" >
           <div className="proj" style={{ borderBottomColor: isDarkMode ? '#fff' : '#9CA3AF',scale:hoveredProject=='0'?'1.1':'1'}} data-no='1'  >
+            <h2>RV Hospital Appointment</h2>
+            <h3>React+express+Mysql</h3>
+          </div>
+          <div className="proj" style={{ borderBottomColor: isDarkMode ? '#fff' : '#9CA3AF',scale:hoveredProject=='1'?'1.1':'1'}} data-no='2'  >
             <h2>Snake Game</h2>
-            <h3>RV University</h3>
+            <h3>Flask Backend</h3>
           </div>
-          <div className="proj" style={{ borderBottomColor: isDarkMode ? '#fff' : '#9CA3AF',scale:hoveredProject=='1'?'1.1':'1' }} data-no='2' >
+          <div className="proj" style={{ borderBottomColor: isDarkMode ? '#fff' : '#9CA3AF',scale:hoveredProject=='2'?'1.1':'1' }} data-no='3' >
             <h2>Acoustic Levitation</h2>
-            <h3>RV University</h3>
-          </div>
-          <div className="proj" style={{ borderBottomColor: isDarkMode ? '#fff' : '#9CA3AF',scale:hoveredProject=='2'?'1.1':'1' }} data-no='3'>
-            <h2>E-commerce Website</h2>
-            <h3>Myself</h3>
+            <h3>Arduino</h3>
           </div>
           <div className="proj" style={{ borderBottomColor: isDarkMode ? '#fff' : '#9CA3AF',scale:hoveredProject=='3'?'1.1':'1' }} data-no='4' >
             <h2>Identify Emotion through audio</h2>
-            <h3>Myself</h3>
+            <h3>Python ML</h3>
           </div>
         </div>
       </div>
@@ -103,15 +103,15 @@ const Project = ({ isDarkMode }) => {
         <h1 style={{ fontWeight: '900', fontSize: '3vw', letterSpacing: '-2px' ,opacity:'0'}}>Projects</h1>
         <h4 style={{ color: isDarkMode ? '#9CA3AF' : '#6B7280',opacity:'0' }}>Here are some projects I did in college</h4>
         <div className="proj-list">
-          <a target='_block' href="https://github.com/YASHAVANTHAP/SNAKE-GAME"><div className="proj"  data-no='0' onMouseMove={mousemove} onMouseLeave={mousenotmove}>
+          <a target='_block' href="https://github.com/yashavanthap55/HOSPITAL_APPOINTMENTnpn"><div className="proj"  data-no='0' onMouseMove={mousemove} onMouseLeave={mousenotmove}>
             <h2></h2>
             <h3></h3>
           </div></a>
-         <a target='_block' href="https://github.com/YASHAVANTHAP/Acoustic_levitation"><div className="proj"  data-no='1' onMouseMove={mousemove} onMouseLeave={mousenotmove}>
+          <a target='_block' href="https://github.com/YASHAVANTHAP/SNAKE-GAME"><div className="proj"  data-no='1' onMouseMove={mousemove} onMouseLeave={mousenotmove}>
             <h2></h2>
             <h3></h3>
-          </div></a> 
-         <a target='_block' href=""><div className="proj"  data-no='2' onMouseMove={mousemove} onMouseLeave={mousenotmove}>
+          </div></a>
+         <a target='_block' href="https://github.com/YASHAVANTHAP/Acoustic_levitation"><div className="proj"  data-no='2' onMouseMove={mousemove} onMouseLeave={mousenotmove}>
             <h2></h2>
             <h3></h3>
           </div></a> 

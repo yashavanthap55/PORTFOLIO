@@ -47,6 +47,17 @@ function About({ isDarkMode }) {
           <h3>Timeline</h3>
           <br />
           <div className="year" id="year-2024">
+            <h4>2025</h4>
+            <ul>
+              <li>Made a simple<a href="https://nodejs.org/en" id='clg'>Hospital mangement</a> fullstack project</li>
+              <li>Completed Data Analysis & Algorithms<a href="https://nodejs.org/en" id='clg'></a></li>
+              <li>OOP's in<a href="https://nodejs.org/en" id='clg'>JAVA</a></li>
+              <li>Operating Systems<a href="https://nodejs.org/en" id='clg'></a></li>
+              <li>started using linux terminal<a href="https://nodejs.org/en" id='clg'></a></li>    
+            </ul>
+          </div>
+          <br />
+          <div className="year" id="year-2024">
             <h4>2024</h4>
             <ul>
               <li>Started using Vite+React framework and<a href="https://nodejs.org/en" id='clg'>Node.js</a></li>
@@ -69,16 +80,9 @@ function About({ isDarkMode }) {
           </div>
           <h3>Hobbies</h3>
           <ul>
-            <li>Playing Guitar 🎸</li>
-            <li>Doing Sketch ART 🎨</li>
-            <li>Listening to music🎧</li>
-          </ul>
-          <h3>Uses</h3>
-          <ul>
-            <li>Laptop - <a href="https://www.hp.com/in-en/shop/victus-gaming-laptop-15-fa0165tx-6n027pa.html" id='clg'>HP victus 12th Gen Intel(R) Core(TM) i5-12450H   2.00 GHz</a> </li>
-            <li>Code Editor - <a href="https://code.visualstudio.com/" id='clg'>Visual Studio code</a> </li>
-            <li>Browser - <a href="https://brave.com/en-in/download/" id='clg'>Brave</a> </li>
-  
+            <li>Playing Guitar </li>
+            <li>Doing Sketch ART </li>
+            <li>Listening to music</li>
           </ul>
         </div>
       </div>
