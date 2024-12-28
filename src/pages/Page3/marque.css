@@ -87,6 +87,7 @@
    text-transform: uppercase;
    position: absolute;
    width: 100vw;
+   cursor: none;
    text-wrap: nowrap;
    height:50vh;
    transform: translateX(80%);

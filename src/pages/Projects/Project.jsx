@@ -103,7 +103,7 @@ const Project = ({ isDarkMode }) => {
         <h1 style={{ fontWeight: '900', fontSize: '3vw', letterSpacing: '-2px' ,opacity:'0'}}>Projects</h1>
         <h4 style={{ color: isDarkMode ? '#9CA3AF' : '#6B7280',opacity:'0' }}>Here are some projects I did in college</h4>
         <div className="proj-list">
-          <a target='_block' href="https://github.com/yashavanthap55/HOSPITAL_APPOINTMENTnpn"><div className="proj"  data-no='0' onMouseMove={mousemove} onMouseLeave={mousenotmove}>
+          <a target='_block' href="https://hospital-appointment-frontend-nhj8.onrender.com"><div className="proj"  data-no='0' onMouseMove={mousemove} onMouseLeave={mousenotmove}>
             <h2></h2>
             <h3></h3>
           </div></a>
