@@ -1,183 +1,179 @@
 @font-face {
-  font-family: 'inspiration';
-  src: url('./../../../font/Inspiration/Inspiration-Regular.ttf');
+  font-family: "inspiration";
+  src: url("./../../../font/Inspiration/Inspiration-Regular.ttf");
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&display=swap');
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .navbar {
-    position: fixed;
-    left: 0;
-    width: 100%;
-    height: 15vh;
-    z-index: 999;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10%;
-    backdrop-filter: blur(5px);
-    animation: navbar 1s ease 3.5s;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 15vh;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  backdrop-filter: blur(5px);
+  animation: navbar 1s ease 3.5s;
 }
-.three-dot{
-    display: none;
+.three-dot {
+  display: none;
 }
 
 @keyframes navbar {
-    0%{
-        top: -15vh;
-       opacity: 0;
-    }
-    100%{
-        opacity:1;
-        top:0;
-    }
+  0% {
+    top: -15vh;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
 }
 .right-text {
-    display: flex;
-    position: relative;
-    gap: 2.5vw;
-    z-index: 3;
+  display: flex;
+  position: relative;
+  gap: 2.5vw;
+  z-index: 3;
 }
-a{
-    text-decoration: none;
-    color: inherit;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .mode {
- display: flex;
- justify-content: center;
- align-self: center;
-    width: 20px;
-    height:20px;
-
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 20px;
+  height: 20px;
 }
 
-.left-text .showe{
-    background-image: linear-gradient(to right, var(--tw-gradient-stops));
-    --tw-gradient-from: #DE1D8D;
-    --tw-gradient-to: #DE1D8D;
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-    transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
-    padding-bottom: 16px;
-    background-repeat: no-repeat;
-    background-position: 0px 100%;
-    background-size: 100% 0.2em;
+.left-text .showe {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #de1d8d;
+  --tw-gradient-to: #de1d8d;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding-bottom: 16px;
+  background-repeat: no-repeat;
+  background-position: 0px 100%;
+  background-size: 100% 0.2em;
 }
-.hovere{
-    background-image: linear-gradient(to right, var(--tw-gradient-stops));
-    --tw-gradient-from: #DE1D8D;
-    --tw-gradient-to: #DE1D8D;
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-    transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
-    padding-bottom: 16px;
-    background-repeat: no-repeat;
-    background-position: 0px 100%;
-    background-size: 0% 0.2em;
+.hovere {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #de1d8d;
+  --tw-gradient-to: #de1d8d;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding-bottom: 16px;
+  background-repeat: no-repeat;
+  background-position: 0px 100%;
+  background-size: 0% 0.2em;
 }
-.hovere:hover{
-    background-size: 100% 0.2em;
-    cursor: pointer;
+.hovere:hover {
+  background-size: 100% 0.2em;
+  cursor: pointer;
 }
-.left-text h1{
-    font-family: "inspiration", cursive;
-    cursor: pointer;
-    opacity: 0;
-   animation: initialfade 2s ease-in-out forwards;
-    animation-delay: 6s;
-} 
+.left-text h1 {
+  font-family: "inspiration", cursive;
+  cursor: pointer;
+  opacity: 0;
+  animation: initialfade 2s ease-in-out forwards;
+  animation-delay: 6s;
+}
 
 .hover {
-    background-image: linear-gradient(to right, var(--tw-gradient-stops));
-    --tw-gradient-from: #DE1D8D;
-    --tw-gradient-to: #DE1D8D;
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-    background-repeat: no-repeat;
-    transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
-    text-decoration-line: none;
-    background-position: 0px 100%;
-    background-size: 0% 0.2em;
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #de1d8d;
+  --tw-gradient-to: #de1d8d;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  background-repeat: no-repeat;
+  transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration-line: none;
+  background-position: 0px 100%;
+  background-size: 0% 0.2em;
 }
 
-.hover:hover{
-    background-size: 100% 0.2em;
-    cursor: pointer;
+.hover:hover {
+  background-size: 100% 0.2em;
+  cursor: pointer;
 }
-.mode img{
-   max-width: 100%;
- max-height: 100%;
- transition:  0.4s ease; 
+.mode img {
+  max-width: 100%;
+  max-height: 100%;
+  transition: 0.4s ease;
 }
-.mode img:hover{
-    scale:1.4;
-    cursor: pointer;
+.mode img:hover {
+  scale: 1.4;
+  cursor: pointer;
 }
-.rotat{
-    transform: rotate(360deg);
-}   
-.show{
-    background-image: linear-gradient(to right, var(--tw-gradient-stops));
-    --tw-gradient-from: #DE1D8D;
-    --tw-gradient-to: #DE1D8D;
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-    background-repeat: no-repeat;
-    transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
-    text-decoration-line: none;
-    background-position: 0px 100%;
-    background-size: 100% 0.2em;
+.rotat {
+  transform: rotate(360deg);
 }
-.right-text.change-style{
-    right:0;
-    opacity: 1;
+.show {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #de1d8d;
+  --tw-gradient-to: #de1d8d;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  background-repeat: no-repeat;
+  transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration-line: none;
+  background-position: 0px 100%;
+  background-size: 100% 0.2em;
+}
+.right-text.change-style {
+  right: 0;
+  opacity: 1;
 }
 @keyframes initialfade {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @media only screen and (max-width: 790px) {
-    .right-text {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        width: 100vw;
-        justify-content: start;
-        z-index: 9999;
-        top: 0;
-        border-top-left-radius: 50px;
-        border-bottom-left-radius: 50px;
-        padding: 80px 30px 0 50px;
-        opacity: 0;
-        right: -100vw;
-        transition: all 0.5s ease-in-out;
-      }
-      
-        .three-dot{
-            display: block;
-            position: absolute;
-            z-index: 9999;
-            right: 40px;
-            top: 40px;
-        }
-       .mode{
-        position: absolute;
-
-       }
-        .right-text h3{
-            margin-top: 20px;
-            font-size: larger;
-            width: 25vw;
-        }
-        .right-text a:first-child{
-          margin-top: 50px;       
-        }
+  .right-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: start;
+    z-index: 9999;
+    top: 0;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    padding: 80px 30px 0 50px;
+    opacity: 0;
+    right: -100vw;
+    transition: all 0.5s ease-in-out;
   }
-  
+
+  .three-dot {
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    right: 40px;
+    top: 40px;
+  }
+  .mode {
+    position: absolute;
+  }
+  .right-text h3 {
+    margin-top: 20px;
+    font-size: larger;
+    width: 25vw;
+  }
+  .right-text a:first-child {
+    margin-top: 50px;
+  }
+}
