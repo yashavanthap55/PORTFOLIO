@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'inspiration';
+  src: url('./../../../font/Inspiration/Inspiration-Regular.ttf');
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&display=swap');
 * {
     margin: 0;
@@ -79,8 +84,11 @@ a{
     cursor: pointer;
 }
 .left-text h1{
-    font-family: "Playwrite BE VLG", cursive;
+    font-family: "inspiration", cursive;
     cursor: pointer;
+    opacity: 0;
+   animation: initialfade 2s ease-in-out forwards;
+    animation-delay: 6s;
 } 
 
 .hover {
@@ -125,6 +133,14 @@ a{
 .right-text.change-style{
     right:0;
     opacity: 1;
+}
+@keyframes initialfade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 @media only screen and (max-width: 790px) {
     .right-text {

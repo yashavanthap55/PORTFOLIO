@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import project from './../../assets/project.js';
 import './Project.css';
 import gsap from 'gsap';
-
+import { Link, useLocation } from 'react-router-dom';
 
 
 const Project = ({ isDarkMode }) => {
@@ -25,7 +25,7 @@ const Project = ({ isDarkMode }) => {
       gsap.to(curseRef.current,{
         top: `${offsetY}px`,
         left: `${offsetX}px`,
-        duration:'0.7',
+        duration:'1',
         ease:'back.out(1)'
       });
     };
@@ -50,7 +50,7 @@ const Project = ({ isDarkMode }) => {
     <>
       <div
         style={{
-          backgroundColor: isDarkMode ? '#000' : '#f7f7ff',
+          backgroundColor: isDarkMode ? '#1e1e1e' : '#f7f7ff',
           color: isDarkMode ? '#fff' : '#000',
           borderTopColor: isDarkMode ? '#1b1b1b' : '#cccccc',
         }}
@@ -103,22 +103,30 @@ const Project = ({ isDarkMode }) => {
         <h1 style={{ fontWeight: '900', fontSize: '3vw', letterSpacing: '-2px' ,opacity:'0'}}>Projects</h1>
         <h4 style={{ color: isDarkMode ? '#9CA3AF' : '#6B7280',opacity:'0' }}>Here are some projects I did in college</h4>
         <div className="proj-list">
-          <a target='_block' href="https://hospital-appointment-frontend-nhj8.onrender.com"><div className="proj"  data-no='0' onMouseMove={mousemove} onMouseLeave={mousenotmove}>
+        <Link to="/projects/hospital-appointment">
+          <div className="proj" data-no='0' onMouseMove={mousemove} onMouseLeave={mousenotmove}>
             <h2></h2>
             <h3></h3>
-          </div></a>
-          <a target='_block' href="https://github.com/YASHAVANTHAP/SNAKE-GAME"><div className="proj"  data-no='1' onMouseMove={mousemove} onMouseLeave={mousenotmove}>
+          </div>
+        </Link>
+        <Link to="/projects/snake-game">
+          <div className="proj" data-no='1' onMouseMove={mousemove} onMouseLeave={mousenotmove}>
             <h2></h2>
             <h3></h3>
-          </div></a>
-         <a target='_block' href="https://github.com/YASHAVANTHAP/Acoustic_levitation"><div className="proj"  data-no='2' onMouseMove={mousemove} onMouseLeave={mousenotmove}>
+          </div>
+        </Link>
+        <Link to="/projects/acoustic-levitation">
+          <div className="proj" data-no='2' onMouseMove={mousemove} onMouseLeave={mousenotmove}>
             <h2></h2>
             <h3></h3>
-          </div></a> 
-         <a target='_block' href="https://github.com/YASHAVANTHAP/Emotion_through_audio"> <div className="proj" data-no='3' onMouseMove={mousemove} onMouseLeave={mousenotmove}>
+          </div>
+        </Link>
+        <Link to="/projects/emotion-through-audio">
+          <div className="proj" data-no='3' onMouseMove={mousemove} onMouseLeave={mousenotmove}>
             <h2></h2>
             <h3></h3>
-          </div></a> 
+          </div>
+        </Link>
         </div>
       </div>
     </>

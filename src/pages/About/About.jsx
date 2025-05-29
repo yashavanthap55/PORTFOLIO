@@ -16,7 +16,7 @@ function About({ isDarkMode }) {
   }
  },[img]);
   return (
-    <div className='About' style={{ backgroundColor: isDarkMode ? '#000' : '#f7f7ff',color: isDarkMode ? '#fff' : '#000'}}>
+    <div className='About' style={{ backgroundColor: isDarkMode ? '#1e1e1e' : '#f7f7ff',color: isDarkMode ? '#fff' : '#000'}}>
       <div className="aabout">
         <div className="myname">
           <div className="lefttext">
@@ -39,7 +39,7 @@ function About({ isDarkMode }) {
         </div>
         <div className="para">
           <p>
-            I am currently a 2nd year Btech pursuing student at RV UNIVERSITY <br />I use <a href="https://gsap.com/" id='clg'>GSAP</a>
+            I am currently a 3rd year Btech pursuing student at RV UNIVERSITY <br />I use <a href="https://gsap.com/" id='clg'>GSAP</a>
               ,<a href="https://scroll.locomotive.ca/docs/#/" id='clg'>Locomotive.js</a>,<a href="https://swiperjs.com/" id='clg'>Swiper.js</a>,<a href="https://threejs.org/" id='clg'>Three.js</a> etc. libraries to make my website interactive.
           </p>
         </div>

@@ -94,7 +94,7 @@ function Home({ isDarkMode, cursorOpacity }) {
 
   return (
     <>
-      <div className="Home" ref={homeRef} style={{ backgroundColor: isDarkMode ? '#000' : '#f7f7ff' }}>
+      <div className="Home" ref={homeRef} style={{ backgroundColor: isDarkMode ? ' #1e1e1e' : '#f7f7ff' }}>
         <div
           className="cursor"
           onClick={handleClick}
@@ -125,7 +125,7 @@ function Home({ isDarkMode, cursorOpacity }) {
                 </div>
               </div>
             </div>
-            <div className="right-eye" style={{ background: isDarkMode ? '#1B1B1B' : 'hsl(0, 0%, 90%)', boxShadow: isDarkMode ? 'inset 0 0 70px 2px #1B1B1B' : '' }}>
+            <div className="right-eye" style={{ background: isDarkMode ? '#1B1B1B' : 'hsl(0, 0%, 90%)', boxShadow: isDarkMode ? 'inset 0 0 70px 2px rgb(74 68 68)' : '' }}>
               <div className="line" style={{ transform: `rotate(${rotate}deg)` }}>
                 <div className="img-container">
                   <img
@@ -143,7 +143,7 @@ function Home({ isDarkMode, cursorOpacity }) {
             </div>
           </div>
         </div>
-        <div className="name" style={{ color: isDarkMode ? '#F7F7FF' : '#000', backgroundColor: isDarkMode ? '#000' : '#F7F7FF' }}>
+        <div className="name" style={{ color: isDarkMode ? '#F7F7FF' : '#000', backgroundColor: isDarkMode ? '#1e1e1e' : '#F7F7FF' }}>
           <div className="about">
             <h1>Yashav<span>a</span>ntha P</h1>
             <h2>frontend developer.</h2>

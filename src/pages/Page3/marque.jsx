@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import sharingan from './../../../public/sharingan.png';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'; // Import OrbitControls
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'; 
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -56,7 +56,7 @@ const Marque = ({ isDarkMode }) => {
     // Three.js Setup
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
-      50, // Adjust FOV if necessary
+      50, 
       window.innerWidth / window.innerHeight,
       0.1,
       1000
@@ -65,11 +65,10 @@ const Marque = ({ isDarkMode }) => {
     const renderer = new THREE.WebGLRenderer({
       canvas: canvasRef.current,
       alpha: true,
-      antialias: true, // Enable anti-aliasing for better visual quality
+      antialias: true, 
     });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // Limit pixel ratio for performance
-
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); 
     // Set up lighting
     const light = new THREE.AmbientLight(0xffffff, 0.8);
     scene.add(light);
@@ -157,9 +156,6 @@ const Marque = ({ isDarkMode }) => {
       const rect = svgRef.current.getBoundingClientRect();
       const offsetX = e.clientX - rect.left;
       const offsetY = e.clientY - rect.top;
-  
-      console.log("Mouse Position:", offsetX, offsetY); // Debugging line
-  
       const updatedPath = `M 10 100 Q ${offsetX} ${offsetY} 1290 100`;
       gsap.to(svgRef.current.querySelector('path'), {
         attr: { d: updatedPath },
@@ -190,7 +186,7 @@ const Marque = ({ isDarkMode }) => {
     <div
       className="marque"
       ref={marqueRef}
-      style={{ backgroundColor: isDarkMode ? '#000' : '#f7f7ff' }}
+      style={{ backgroundColor: isDarkMode ? '#1e1e1e' : '#f7f7ff' }}
     >
       <div className="design"></div>
       <div className="design2"></div>

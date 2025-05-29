@@ -5,7 +5,7 @@ import icons from '../../assets/icons'
 const footer = ({isDarkMode}) => {
   
   return (
-    <div className='footer' style={{backgroundColor:isDarkMode?'#000':'#f7f7ff'}}>
+    <div className='footer' style={{backgroundColor:isDarkMode?'#1e1e1e':'#f7f7ff'}}>
       <div className="left" style={{color:isDarkMode?'#fff':'#000'}}>
         <h4>© 2024 • Yashavantha P</h4>
       </div>

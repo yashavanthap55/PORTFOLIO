@@ -40,7 +40,9 @@ function Navbar({ isDarkMode, toggleTheme, setCursorOpacity }) {
     >
       <div className="left-text">
         <Link to='/PORTFOLIO/'>
-          <h1 className={location.pathname === '/PORTFOLIO/' ? 'showe' : 'hovere'}>y.</h1>
+          <h1 className={location.pathname === '/PORTFOLIO/' ? 'showe' : 'hovere'}>
+           Y
+          </h1>
         </Link>
       </div>
       <div className={`right-text ${change && isMobile ? 'change-style' : ''}`} style={{backgroundColor:isMobile&&isDarkMode?'#000':!isDarkMode&&isMobile?'#fff':''}}>
@@ -53,7 +55,7 @@ function Navbar({ isDarkMode, toggleTheme, setCursorOpacity }) {
         <Link to="/about">
           <h3 className={location.pathname === '/about' ? 'show' : 'hover'} onClick={menuchange}>About</h3>
         </Link>
-        <Link to="/project">
+        <Link to="/projects">
           <h3 className={location.pathname === '/project' ? 'show' : 'hover'} style={{ marginRight: '6vw', overflow: 'hidden' }} onClick={menuchange}>Project</h3>
         </Link>
 

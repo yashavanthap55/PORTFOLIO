@@ -1,0 +1,89 @@
+.outerLand{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 10000;
+    transform: translate(0px,0px);
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(25px);
+    animation: smooth 3s ease-in-out forwards,disppear 2s ease-in-out forwards;
+    /* animation: disppear 2s ease-in-out forwards; */
+    animation-delay: 3s , 6s;
+    pointer-events: auto;
+}
+.outerLand svg{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.outerLand svg path{
+    fill: #000;
+    transform-origin: center;
+    transform: scale(0.4);
+    fill: transparent;
+    stroke: #000;
+    stroke-width: 0.1;
+    stroke-dasharray: 72;
+    stroke-dashoffset: 0;
+    animation: textanimation 4s ease-in-out forwards;
+}
+ @keyframes textanimation {
+      0% {
+        stroke-dashoffset: 72;
+      }
+      80% {
+        fill: transparent;
+      }
+      100% {
+        fill: black;
+        stroke-dashoffset: 0;
+      }
+    }
+
+@keyframes smooth {
+  50%{
+    backdrop-filter: blur(0px);
+  }
+  100%{
+    transform: scale(0.15);
+    transform-origin: top;
+    top: -1.1vh;
+    left: -39.7vw;
+    backdrop-filter: blur(0px);
+  }
+}
+@keyframes disppear {
+  90%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    display: none;
+  }
+  
+}
+
+@keyframes smoothMobile {
+  50%{
+    backdrop-filter: blur(0px);
+  }
+  100%{
+    transform: scale(0.15);
+    transform-origin: top;
+    top: -1.1vh;
+    left: -38.7vw;
+    backdrop-filter: blur(0px);
+  }
+}
+
+@media (max-width: 640px) {
+  .outerLand {
+    animation: smoothMobile 3s ease-in-out forwards, disppear 2s ease-in-out forwards;
+    animation-delay: 3s, 6s;
+  }
+}
