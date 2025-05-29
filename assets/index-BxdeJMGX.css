@@ -1,6 +1,6 @@
 @font-face {
-  font-family: inspiration;
-  src: url(/assets/Inspiration-Regular-r57MPnmi.ttf);
+  font-family: "inspiration";
+  src: url("PORTFOLIO/assets/Inspiration-Regular-r57MPnmi.ttf");
 }
 * {
   margin: 0;
