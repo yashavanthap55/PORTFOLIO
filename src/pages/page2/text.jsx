@@ -97,7 +97,7 @@ function Text({ isDarkMode }) {
 
   return (
     <div style={{ position: 'relative', zIndex: '8' }}>
-      <div className='text' data-scroll data-scroll-speed='-0.5' style={{ backgroundColor: isDarkMode ? '#fff' : '#000' }}>
+      <div className='text' data-scroll data-scroll-speed='-0.5' style={{ backgroundColor: isDarkMode ? '#fff' : '#1e1e1e' }}>
         <div className="container">
           <h1 className='first'>
             &lt;&gt; I love coding.
