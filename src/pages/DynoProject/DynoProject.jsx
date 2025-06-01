@@ -5,12 +5,11 @@ import "./DynoProject.css";
 import project from "./../../assets/project.js";
 import { Link } from 'react-router-dom';
 
-// Sample project data map
 const projectData = {
   
   "hospital-appointment": {
     title: "Hospital Appointment System",
-    img: `${project[0]}`, // Replace with real image URL
+    img: `${project[0]}`, 
     description:
       "A full-stack hospital appointment booking system developed using React and Node.js. The system features secure user authentication and enables patients to seamlessly log in, view available doctors, and book appointments. Backend APIs efficiently interact with a MySQL database to handle real-time data retrieval and updates.",
     tools:
@@ -18,9 +17,18 @@ const projectData = {
     live: "https://hospital-appointment-delta.vercel.app/",
     linkcode: "https://github.com/yashavanthap55/Hospital_appointment",
   },
+  "brain-tumor-detection":{
+    title: "Brain Tumor Detection",
+    img: `${project[1]}`, 
+    description:
+      "A machine learning project that detects brain tumors from MRI images using Convolutional Neural Networks (CNN). The project got 94% accuracy in predicting type of tumor found in MRI.",
+    tools: "Jupyter Notebook for Machine Learning \n CNN",
+    live: "",
+    linkcode: "https://github.com/yashavanthap55/brain_tumor_detection",
+  },
   "snake-game": {
     title: "Snake Game",
-    img: `${project[1]}`, // Replace with real image URL
+    img: `${project[2]}`, 
     description:
       "A classic Snake game built using Python Flask and javascript, featuring user authentication, high score tracking. The application includes intuitive controls and a simple web interface for an engaging user experience.",
     tools: "Backend : Flask \n Database : mysqlite \n Frontend : HTML",
@@ -29,7 +37,7 @@ const projectData = {
   },
   "acoustic-levitation": {
     title: "Acoustic Levitation",
-    img: `${project[2]}`,
+    img: `${project[3]}`,
     description:
       "A physics simulation project demonstrating acoustic levitation principles using ultrasonic waves.",
     tools: "Arduino UNO code",
@@ -38,7 +46,7 @@ const projectData = {
   },
   "emotion-through-audio": {
     title: "Emotion Through Audio",
-    img: `${project[3]}`,
+    img: `${project[4]}`,
     description:
       "A machine learning project that detects emotions from audio signals using Convolutional Neural Networks (CNN).",
     tools: "Jupyter Notebook for Machine Learning \n CNN",
@@ -54,35 +62,38 @@ const DynoProject = ({ isDarkMode }) => {
   const initialPath = "M 10 100 Q 250 100 1290 100";
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
-      const rect = svgRef.current.getBoundingClientRect();
-      const offsetX = e.clientX - rect.left;
-      const offsetY = e.clientY - rect.top;
-      const updatedPath = `M 10 100 Q ${offsetX} ${offsetY} 1290 100`;
-      gsap.to(svgRef.current.querySelector("path"), {
-        attr: { d: updatedPath },
-        duration: 0.3,
-        ease: "elastic.out(1,0.2)",
-      });
-    };
+  const svgElement = svgRef.current;
+  if (!svgElement) return;
 
-    const handleMouseLeave = () => {
-      gsap.to(svgRef.current.querySelector("path"), {
-        attr: { d: initialPath },
-        ease: "elastic.out(1,0.2)",
-      });
-    };
+  const handleMouseMove = (e) => {
+    const rect = svgElement.getBoundingClientRect();
+    const offsetX = e.clientX - rect.left;
+    const offsetY = e.clientY - rect.top;
+    const updatedPath = `M 10 100 Q ${offsetX} ${offsetY} 1290 100`;
 
-    const svgElement = svgRef.current;
-    svgElement.addEventListener("mousemove", handleMouseMove);
-    svgElement.addEventListener("mouseleave", handleMouseLeave);
+    gsap.to(svgElement.querySelector("path"), {
+      attr: { d: updatedPath },
+      duration: 0.3,
+      ease: "elastic.out(1,0.2)",
+    });
+  };
 
-    // Cleanup event listeners
-    return () => {
-      svgElement.removeEventListener("mousemove", handleMouseMove);
-      svgElement.removeEventListener("mouseleave", handleMouseLeave);
-    };
-  }, []);
+  const handleMouseLeave = () => {
+    gsap.to(svgElement.querySelector("path"), {
+      attr: { d: initialPath },
+      ease: "elastic.out(1,0.2)",
+    });
+  };
+
+  svgElement.addEventListener("mousemove", handleMouseMove);
+  svgElement.addEventListener("mouseleave", handleMouseLeave);
+
+  return () => {
+    svgElement.removeEventListener("mousemove", handleMouseMove);
+    svgElement.removeEventListener("mouseleave", handleMouseLeave);
+  };
+}, []);
+
 
   if (!project) {
     return (

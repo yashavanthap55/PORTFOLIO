@@ -78,16 +78,20 @@ const Project = ({ isDarkMode }) => {
             <h3>React+express+Mysql</h3>
           </div>
           <div className="proj" style={{ borderBottomColor: isDarkMode ? '#fff' : '#9CA3AF',scale:hoveredProject=='1'?'1.1':'1'}} data-no='2'  >
+            <h2>Brain Tumor detection</h2>
+            <h3>Machine Learning</h3>
+          </div>
+          <div className="proj" style={{ borderBottomColor: isDarkMode ? '#fff' : '#9CA3AF',scale:hoveredProject=='2'?'1.1':'1'}} data-no='3'  >
             <h2>Snake Game</h2>
             <h3>Flask Backend</h3>
           </div>
-          <div className="proj" style={{ borderBottomColor: isDarkMode ? '#fff' : '#9CA3AF',scale:hoveredProject=='2'?'1.1':'1' }} data-no='3' >
+          <div className="proj" style={{ borderBottomColor: isDarkMode ? '#fff' : '#9CA3AF',scale:hoveredProject=='3'?'1.1':'1' }} data-no='4' >
             <h2>Acoustic Levitation</h2>
             <h3>Arduino</h3>
           </div>
-          <div className="proj" style={{ borderBottomColor: isDarkMode ? '#fff' : '#9CA3AF',scale:hoveredProject=='3'?'1.1':'1' }} data-no='4' >
+          <div className="proj" style={{ borderBottomColor: isDarkMode ? '#fff' : '#9CA3AF',scale:hoveredProject=='4'?'1.1':'1' }} data-no='5' >
             <h2>Identify Emotion through audio</h2>
-            <h3>Python ML</h3>
+            <h3>Machine Learning</h3>
           </div>
         </div>
       </div>
@@ -109,20 +113,26 @@ const Project = ({ isDarkMode }) => {
             <h3></h3>
           </div>
         </Link>
-        <Link to="/projects/snake-game">
+         <Link to="/projects/brain-tumor-detection">
           <div className="proj" data-no='1' onMouseMove={mousemove} onMouseLeave={mousenotmove}>
             <h2></h2>
             <h3></h3>
           </div>
         </Link>
-        <Link to="/projects/acoustic-levitation">
+        <Link to="/projects/snake-game">
           <div className="proj" data-no='2' onMouseMove={mousemove} onMouseLeave={mousenotmove}>
             <h2></h2>
             <h3></h3>
           </div>
         </Link>
-        <Link to="/projects/emotion-through-audio">
+        <Link to="/projects/acoustic-levitation">
           <div className="proj" data-no='3' onMouseMove={mousemove} onMouseLeave={mousenotmove}>
+            <h2></h2>
+            <h3></h3>
+          </div>
+        </Link>
+        <Link to="/projects/emotion-through-audio">
+          <div className="proj" data-no='4' onMouseMove={mousemove} onMouseLeave={mousenotmove}>
             <h2></h2>
             <h3></h3>
           </div>
