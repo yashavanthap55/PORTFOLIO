@@ -6803,18 +6803,6 @@ function GE(n, e, t) {
       Ps(n, e, t);
   }
 }
-function yA(n) {
-  var e = n.updateQueue;
-  if (e !== null) {
-    n.updateQueue = null;
-    var t = n.stateNode;
-    t === null && (t = n.stateNode = new Ob()),
-      e.forEach(function (i) {
-        var r = jb.bind(null, n, i);
-        t.has(i) || (t.add(i), i.then(r, r));
-      });
-  }
-}
 function dr(n, e) {
   var t = e.deletions;
   if (t !== null)
