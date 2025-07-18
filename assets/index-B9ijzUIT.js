@@ -45508,11 +45508,11 @@ const eF = ({ isDarkMode: n }) => {
       )
     );
   },
-  tF = "PORTFOLIO/assets/kamui-spc2VBYg.jpg",
-  nF = "PORTFOLIO/assets/amaterasu-DXrEAWK1.webp",
-  iF = "PORTFOLIO/assets/madara-DNqfRvnI.png",
-  rF = "PORTFOLIO/assets/tsukuyomi-6ZoCOhaD.png",
-  sF = "PORTFOLIO/assets/rinnegan-12k8eFCA.png",
+  tF = "/PORTFOLIO/assets/kamui-spc2VBYg.jpg",
+  nF = "/PORTFOLIO/assets/amaterasu-DXrEAWK1.webp",
+  iF = "/PORTFOLIO/assets/madara-DNqfRvnI.png",
+  rF = "/PORTFOLIO/assets/tsukuyomi-6ZoCOhaD.png",
+  sF = "/PORTFOLIO/assets/rinnegan-12k8eFCA.png",
   Hx = [sF, nF, iF, rF, tF];
 function oF({ isDarkMode: n, cursorOpacity: e }) {
   const [t, i] = re.useState(0),
