@@ -17942,7 +17942,7 @@ function QP({ isDarkMode: n }) {
     )
   );
 }
-const JP = "PORTFOLIO/assets/sharingan-lnQjOL9s.png";
+const JP = "/assets/sharingan-lnQjOL9s.png";
 /**
  * @license
  * Copyright 2010-2024 Three.js Authors
@@ -45376,7 +45376,7 @@ const eF = ({ isDarkMode: n }) => {
         const u = new sO();
         let h = null;
         u.load(
-          "/model/itachi.glb",
+          "PORTFOLIO/model/itachi.glb",
           (m) => {
             (h = m.scene), s.add(h);
             const v = new Yr().setFromObject(h).getCenter(new B());
@@ -45508,11 +45508,11 @@ const eF = ({ isDarkMode: n }) => {
       )
     );
   },
-  tF = "PORTFOLIO/assets/kamui-spc2VBYg.jpg",
-  nF = "PORTFOLIO/assets/amaterasu-DXrEAWK1.webp",
-  iF = "PORTFOLIO/assets/madara-DNqfRvnI.png",
-  rF = "PORTFOLIO/assets/tsukuyomi-6ZoCOhaD.png",
-  sF = "PORTFOLIO/assets/rinnegan-12k8eFCA.png",
+  tF = "/assets/kamui-spc2VBYg.jpg",
+  nF = "/assets/amaterasu-DXrEAWK1.webp",
+  iF = "/assets/madara-DNqfRvnI.png",
+  rF = "/assets/tsukuyomi-6ZoCOhaD.png",
+  sF = "/assets/rinnegan-12k8eFCA.png",
   Hx = [sF, nF, iF, rF, tF];
 function oF({ isDarkMode: n, cursorOpacity: e }) {
   const [t, i] = re.useState(0),
@@ -45802,15 +45802,15 @@ const aF = ({ isDarkMode: n }) =>
         )
       )
     ),
-  lF = "PORTFOLIO/assets/item1-Dcv5CxWi.png",
-  cF = "PORTFOLIO/assets/item2-DMaa20WB.png",
-  uF = "PORTFOLIO/assets/item3-B9x9YwU4.png",
-  hF = "PORTFOLIO/assets/item4-BzWnG2g0.png",
-  fF = "PORTFOLIO/assets/item5-MS-89kXu.png",
-  dF = "PORTFOLIO/assets/item6-BcTO1hNA.png",
-  pF = "PORTFOLIO/assets/item7-mA_nhctK.png",
+  lF = "/assets/item1-Dcv5CxWi.png",
+  cF = "/assets/item2-DMaa20WB.png",
+  uF = "/assets/item3-B9x9YwU4.png",
+  hF = "/assets/item4-BzWnG2g0.png",
+  fF = "/assets/item5-MS-89kXu.png",
+  dF = "/assets/item6-BcTO1hNA.png",
+  pF = "/assets/item7-mA_nhctK.png",
   Vx = [lF, cF, uF, hF, fF, dF, pF],
-  mF = "PORTFOLIO/assets/background_dark-D7jt6mMr.jpg",
+  mF = "/assets/background_dark-D7jt6mMr.jpg",
   gF =
     "data:image/jpeg;base64,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",
   _F =
@@ -45902,11 +45902,11 @@ const aF = ({ isDarkMode: n }) =>
       )
     );
   },
-  yF = "PORTFOLIO/assets/levitation-kcmmsMl2.jpg",
-  xF = "PORTFOLIO/assets/snake_game-D-k8js63.png",
-  SF = "PORTFOLIO/assets/emotion-CXHLi953.png",
-  EF = "PORTFOLIO/assets/hospital-CKmalzyn.png",
-  MF = "PORTFOLIO/assets/brain_tumor-Dmy8ct9w.png",
+  yF = "/assets/levitation-kcmmsMl2.jpg",
+  xF = "/assets/snake_game-D-k8js63.png",
+  SF = "/assets/emotion-CXHLi953.png",
+  EF = "/assets/hospital-CKmalzyn.png",
+  MF = "/assets/brain_tumor-Dmy8ct9w.png",
   qa = [EF, MF, xF, yF, SF],
   TF = ({ isDarkMode: n }) => {
     const [e, t] = re.useState(0),
@@ -46169,7 +46169,7 @@ const aF = ({ isDarkMode: n }) =>
       )
     );
   },
-  wF = "PORTFOLIO/assets/my_img-CTnlKG_w.jpg";
+  wF = "/assets/my_img-CTnlKG_w.jpg";
 function bF({ isDarkMode: n }) {
   const [e, t] = re.useState(!1),
     i = () => {
