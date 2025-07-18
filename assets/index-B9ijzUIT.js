@@ -17942,7 +17942,7 @@ function QP({ isDarkMode: n }) {
     )
   );
 }
-const JP = "/assets/sharingan-lnQjOL9s.png";
+const JP = "/PORTFOLIO/assets/sharingan-lnQjOL9s.png";
 /**
  * @license
  * Copyright 2010-2024 Three.js Authors
@@ -45376,7 +45376,7 @@ const eF = ({ isDarkMode: n }) => {
         const u = new sO();
         let h = null;
         u.load(
-          "/model/itachi.glb",
+          "/PORTFOLIO/model/itachi.glb",
           (m) => {
             (h = m.scene), s.add(h);
             const v = new Yr().setFromObject(h).getCenter(new B());
@@ -46169,7 +46169,7 @@ const aF = ({ isDarkMode: n }) =>
       )
     );
   },
-  wF = "/assets/my_img-CTnlKG_w.jpg";
+  wF = "/PORTFOLIO/assets/my_img-CTnlKG_w.jpg";
 function bF({ isDarkMode: n }) {
   const [e, t] = re.useState(!1),
     i = () => {
