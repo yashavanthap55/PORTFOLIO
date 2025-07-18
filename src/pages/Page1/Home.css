@@ -14,7 +14,7 @@
     position: relative;
     width:80%;
     height:83vh; 
-    animation: text 1s ease 3s 1;
+    /* animation: text 1s ease 3s forwards; */
     z-index: 1;
 }
 @keyframes text {
@@ -203,7 +203,7 @@ scale: 1.5;
     position: absolute;
     width: auto;
     bottom:30vh;
-   animation:text 1.2s ease 3s;
+   /* animation:text 1.2s ease 3s; */
 }
 .rotate{
     transform: rotate(180deg);

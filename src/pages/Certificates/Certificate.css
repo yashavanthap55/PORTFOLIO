@@ -3,6 +3,9 @@
   width: 100%;
   height: 100vh;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   scale: 0.8;
   animation: fadestart 0.5s ease-in-out;
@@ -25,14 +28,6 @@
   left: calc(45% - 100px);
   transform-style: preserve-3d;
   transform: perspective(1000px);
-  animation: autoRun 20s linear infinite;
-}
-@keyframes autoRun{
-  from{
-      transform: perspective(1000px)  rotateY(0deg);
-  }to{
-      transform: perspective(1000px)  rotateY(360deg);
-  }
 }
 
 .banner .slider .item{
@@ -47,9 +42,37 @@
   height: 100%;
   object-fit: cover;
 }
-.banner .paused{
-  animation:ab;
+.large-controls {
+  position: absolute;
+  bottom: 0;
+  height: 5vh;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  align-items: center;
 }
+
+.large-nav-icon {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.large-nav-icon:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+.large-nav-icon:active {
+  transform: scale(1.1);
+}
+
+.slider {
+  transition: transform 0.5s ease-in-out;
+}
+
 @media only screen and (max-width: 790px){
   .banner{
     scale: 0.5;
@@ -57,5 +80,9 @@
   }
   .banner .slider{
   scale: 0.5;
+  }
+    .large-nav-icon {
+    width: 40px;
+    height: 40px;
   }
 }
