@@ -45802,13 +45802,13 @@ const aF = ({ isDarkMode: n }) =>
         )
       )
     ),
-  lF = "/assets/item1-Dcv5CxWi.png",
-  cF = "/assets/item2-DMaa20WB.png",
-  uF = "/assets/item3-B9x9YwU4.png",
-  hF = "/assets/item4-BzWnG2g0.png",
-  fF = "/assets/item5-MS-89kXu.png",
-  dF = "/assets/item6-BcTO1hNA.png",
-  pF = "/assets/item7-mA_nhctK.png",
+  lF = "/PORTFOLIO/assets/item1-Dcv5CxWi.png",
+  cF = "/PORTFOLIO/assets/item2-DMaa20WB.png",
+  uF = "/PORTFOLIO/assets/item3-B9x9YwU4.png",
+  hF = "/PORTFOLIO/assets/item4-BzWnG2g0.png",
+  fF = "/PORTFOLIO/assets/item5-MS-89kXu.png",
+  dF = "/PORTFOLIO/assets/item6-BcTO1hNA.png",
+  pF = "/PORTFOLIO/assets/item7-mA_nhctK.png",
   Vx = [lF, cF, uF, hF, fF, dF, pF],
   mF = "/assets/background_dark-D7jt6mMr.jpg",
   gF =
@@ -45902,11 +45902,11 @@ const aF = ({ isDarkMode: n }) =>
       )
     );
   },
-  yF = "/assets/levitation-kcmmsMl2.jpg",
-  xF = "/assets/snake_game-D-k8js63.png",
-  SF = "/assets/emotion-CXHLi953.png",
-  EF = "/assets/hospital-CKmalzyn.png",
-  MF = "/assets/brain_tumor-Dmy8ct9w.png",
+  yF = "/PORTFOLIO/assets/levitation-kcmmsMl2.jpg",
+  xF = "/PORTFOLIO/assets/snake_game-D-k8js63.png",
+  SF = "/PORTFOLIO/assets/emotion-CXHLi953.png",
+  EF = "/PORTFOLIO/assets/hospital-CKmalzyn.png",
+  MF = "/PORTFOLIO/assets/brain_tumor-Dmy8ct9w.png",
   qa = [EF, MF, xF, yF, SF],
   TF = ({ isDarkMode: n }) => {
     const [e, t] = re.useState(0),
