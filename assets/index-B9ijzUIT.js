@@ -17942,7 +17942,7 @@ function QP({ isDarkMode: n }) {
     )
   );
 }
-const JP = "PORTFOLIO/assets/sharingan-lnQjOL9s.png";
+const JP = "/PORTFOLIO/assets/sharingan-lnQjOL9s.png";
 /**
  * @license
  * Copyright 2010-2024 Three.js Authors
