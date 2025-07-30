@@ -8,9 +8,9 @@ import leftArrow from './../../../public/icons/left-arrow.png';
 import rightArrow from './../../../public/icons/right-arrow.png';
 
 const Certificate = ({ isDarkMode }) => {
-  const [rotationX, setRotationX] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [rotationX, setRotationX] = useState(0); // We will keep increasing this value
   const bannerRef = useRef(null);
   const sliderRef = useRef(null);
 
@@ -18,31 +18,19 @@ const Certificate = ({ isDarkMode }) => {
   const rotationPerSlide = 360 / totalCertificates;
 
   const goToSlide = (index) => {
-    if (isTransitioning) return; // Prevent new animations during transition
+    if (isTransitioning) return;
+
     setIsTransitioning(true);
 
     const newIndex = (index + totalCertificates) % totalCertificates;
-    let newRotation = newIndex * rotationPerSlide;
-    const currentRotation = rotationX;
+    const newRotation = rotationX + (index - currentIndex) * rotationPerSlide;
 
-    // Normalize rotation to take shortest path
-    let delta = newRotation - currentRotation;
-    if (delta > 180) {
-      newRotation -= 360;
-    } else if (delta < -180) {
-      newRotation += 360;
-    }
-
-    // Ensure rotation stays within 0–360°
-    newRotation = ((newRotation % 360) + 360) % 360;
-
-    // Animate rotation using GSAP
     gsap.to(sliderRef.current, {
       rotationY: newRotation,
-      duration: 0.01, // Smooth, responsive duration
-      ease: 'elastic.out', // Natural, smooth easing
+      duration: 0.01,
       onUpdate: () => {
-        setRotationX(gsap.getProperty(sliderRef.current, 'rotationY'));
+        const currentRotation = gsap.getProperty(sliderRef.current, 'rotationY');
+        setRotationX(currentRotation);
       },
       onComplete: () => {
         setCurrentIndex(newIndex);
@@ -52,7 +40,6 @@ const Certificate = ({ isDarkMode }) => {
   };
 
   useEffect(() => {
-    const currentRef = bannerRef.current;
     return () => {};
   }, []);
 
@@ -74,11 +61,13 @@ const Certificate = ({ isDarkMode }) => {
             transform: `perspective(1000px) rotateY(${rotationX}deg)`,
           }}
         >
-          {certificate.map((cert, index) => (
-            <div className="item" style={{ '--position': index + 1 }} key={index}>
-              <img src={cert} alt={`Certificate ${index + 1}`} />
-            </div>
-          ))}
+         {certificate.map((cert, index) => (
+  <div className="item" style={{ '--position': index + 1 }} key={index}>
+    <a href={cert.link} target="_blank" rel="noopener noreferrer">
+      <img src={cert.src} alt={`Certificate ${index + 1}`} />
+    </a>
+  </div>
+))}
         </div>
         <div className="large-controls">
           <img
