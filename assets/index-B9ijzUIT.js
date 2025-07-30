@@ -6803,6 +6803,18 @@ function GE(n, e, t) {
       Ps(n, e, t);
   }
 }
+function yA(n) {
+  var e = n.updateQueue;
+  if (e !== null) {
+    n.updateQueue = null;
+    var t = n.stateNode;
+    t === null && (t = n.stateNode = new Ob()),
+      e.forEach(function (i) {
+        var r = jb.bind(null, n, i);
+        t.has(i) || (t.add(i), i.then(r, r));
+      });
+  }
+}
 function dr(n, e) {
   var t = e.deletions;
   if (t !== null)
@@ -45376,7 +45388,7 @@ const eF = ({ isDarkMode: n }) => {
         const u = new sO();
         let h = null;
         u.load(
-          "/PORTFOLIO/model/itachi.glb",
+          "/model/itachi.glb",
           (m) => {
             (h = m.scene), s.add(h);
             const v = new Yr().setFromObject(h).getCenter(new B());
@@ -45508,11 +45520,11 @@ const eF = ({ isDarkMode: n }) => {
       )
     );
   },
-  tF = "/PORTFOLIO/assets/kamui-spc2VBYg.jpg",
-  nF = "/PORTFOLIO/assets/amaterasu-DXrEAWK1.webp",
-  iF = "/PORTFOLIO/assets/madara-DNqfRvnI.png",
-  rF = "/PORTFOLIO/assets/tsukuyomi-6ZoCOhaD.png",
-  sF = "/PORTFOLIO/assets/rinnegan-12k8eFCA.png",
+  tF = "/assets/kamui-spc2VBYg.jpg",
+  nF = "/assets/amaterasu-DXrEAWK1.webp",
+  iF = "/assets/madara-DNqfRvnI.png",
+  rF = "/assets/tsukuyomi-6ZoCOhaD.png",
+  sF = "/assets/rinnegan-12k8eFCA.png",
   Hx = [sF, nF, iF, rF, tF];
 function oF({ isDarkMode: n, cursorOpacity: e }) {
   const [t, i] = re.useState(0),
@@ -45809,7 +45821,36 @@ const aF = ({ isDarkMode: n }) =>
   fF = "/PORTFOLIO/assets/item5-MS-89kXu.png",
   dF = "/PORTFOLIO/assets/item6-BcTO1hNA.png",
   pF = "/PORTFOLIO/assets/item7-mA_nhctK.png",
-  Vx = [lF, cF, uF, hF, fF, dF, pF],
+  Vx = [
+    {
+      src: lF,
+      link: "https://yashavanthap55.github.io/PORTFOLIO/assets/item1-Dcv5CxWi.png",
+    },
+    {
+      src: cF,
+      link: "https://yashavanthap55.github.io/PORTFOLIO/assets/item2-DMaa20WB.png",
+    },
+    {
+      src: uF,
+      link: "https://yashavanthap55.github.io/PORTFOLIO/assets/item3-B9x9YwU4.png",
+    },
+    {
+      src: hF,
+      link: "https://yashavanthap55.github.io/PORTFOLIO/assets/item4-BzWnG2g0.png",
+    },
+    {
+      src: fF,
+      link: "https://yashavanthap55.github.io/PORTFOLIO/assets/item5-MS-89kXu.png",
+    },
+    {
+      src: dF,
+      link: "https://yashavanthap55.github.io/PORTFOLIO/assets/item6-BcTO1hNA.png",
+    },
+    {
+      src: pF,
+      link: "https://yashavanthap55.github.io/PORTFOLIO/assets/item7-mA_nhctK.png",
+    },
+  ],
   mF = "PORTFOLIO/assets/background_dark-D7jt6mMr.jpg",
   gF =
     "PORTFOLIO/assets/background_white.jpg",
@@ -45819,34 +45860,31 @@ const aF = ({ isDarkMode: n }) =>
     "data:image/png;base64,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",
   AF = ({ isDarkMode: n }) => {
     const [e, t] = re.useState(0),
-      [i, r] = re.useState(0),
-      [s, o] = re.useState(!1),
+      [i, r] = re.useState(!1),
+      [s, o] = re.useState(0),
       a = re.useRef(null),
       l = re.useRef(null),
       c = Vx.length,
       u = 360 / c,
       h = (f) => {
-        if (s) return;
-        o(!0);
-        const d = (f + c) % c;
-        let g = d * u,
-          m = g - e;
-        m > 180 ? (g -= 360) : m < -180 && (g += 360),
-          (g = ((g % 360) + 360) % 360),
-          Xt.to(l.current, {
-            rotationY: g,
-            duration: 0.01,
-            ease: "elastic.out",
-            onUpdate: () => {
-              t(Xt.getProperty(l.current, "rotationY"));
-            },
-            onComplete: () => {
-              r(d), o(!1);
-            },
-          });
+        if (i) return;
+        r(!0);
+        const d = (f + c) % c,
+          g = s + (f - e) * u;
+        Xt.to(l.current, {
+          rotationY: g,
+          duration: 0.01,
+          onUpdate: () => {
+            const _ = Xt.getProperty(l.current, "rotationY");
+            o(_);
+          },
+          onComplete: () => {
+            t(d), r(!1);
+          },
+        });
       };
     return (
-      re.useEffect(() => (a.current, () => {}), []),
+      re.useEffect(() => () => {}, []),
       L.createElement(
         "div",
         {
@@ -45867,14 +45905,25 @@ const aF = ({ isDarkMode: n }) =>
               ref: l,
               style: {
                 "--quantity": c,
-                transform: `perspective(1000px) rotateY(${e}deg)`,
+                transform: `perspective(1000px) rotateY(${s}deg)`,
               },
             },
             Vx.map((f, d) =>
               L.createElement(
                 "div",
                 { className: "item", style: { "--position": d + 1 }, key: d },
-                L.createElement("img", { src: f, alt: `Certificate ${d + 1}` })
+                L.createElement(
+                  "a",
+                  {
+                    href: f.link,
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                  },
+                  L.createElement("img", {
+                    src: f.src,
+                    alt: `Certificate ${d + 1}`,
+                  })
+                )
               )
             )
           ),
@@ -45885,7 +45934,7 @@ const aF = ({ isDarkMode: n }) =>
               src: _F,
               className: "large-nav-icon",
               style: { filter: n ? "invert(1)" : "none" },
-              onClick: () => h(i - 1),
+              onClick: () => h(e - 1),
               alt: "Previous certificate",
               "aria-label": "Previous certificate",
             }),
@@ -45893,7 +45942,7 @@ const aF = ({ isDarkMode: n }) =>
               src: vF,
               className: "large-nav-icon",
               style: { filter: n ? "invert(1)" : "none" },
-              onClick: () => h(i + 1),
+              onClick: () => h(e + 1),
               alt: "Next certificate",
               "aria-label": "Next certificate",
             })
@@ -46169,7 +46218,7 @@ const aF = ({ isDarkMode: n }) =>
       )
     );
   },
-  wF = "/PORTFOLIO/assets/my_img-CTnlKG_w.jpg";
+  wF = "/assets/my_img-De5Z8A05.jpg";
 function bF({ isDarkMode: n }) {
   const [e, t] = re.useState(!1),
     i = () => {
@@ -46466,7 +46515,28 @@ const CF = () =>
         })
       )
     ),
-  RF = () => L.createElement("div", null, "notfound");
+  RF = () =>
+    L.createElement(
+      "div",
+      {
+        style: {
+          height: "100vh",
+          width: "100vw",
+          position: "fixed",
+          top: 0,
+          left: 0,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          fontSize: "10rem",
+          fontWeight: "bold",
+          color: "#ff4444",
+          backgroundColor: "#000",
+          zIndex: 1e5,
+        },
+      },
+      "404"
+    );
 var I_ = function () {
   return (
     (I_ =
