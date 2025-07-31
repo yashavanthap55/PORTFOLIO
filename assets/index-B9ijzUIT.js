@@ -17852,7 +17852,7 @@ function QP({ isDarkMode: n }) {
         className: "text",
         "data-scroll": !0,
         "data-scroll-speed": "-0.5",
-        style: { backgroundColor: "#1e1e1e" },
+        style: { backgroundColor: n ? "#fff" ,"#1e1e1e" },
       },
       L.createElement(
         "div",
