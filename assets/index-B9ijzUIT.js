@@ -46218,7 +46218,7 @@ const aF = ({ isDarkMode: n }) =>
       )
     );
   },
-  wF = "/PORTFOLIO/assets/my_img-De5Z8A05.jpg";
+  wF = "/PORTFOLIO/assets/my_img-CTnlKG_w.jpg";
 function bF({ isDarkMode: n }) {
   const [e, t] = re.useState(!1),
     i = () => {
