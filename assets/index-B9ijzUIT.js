@@ -45388,7 +45388,7 @@ const eF = ({ isDarkMode: n }) => {
         const u = new sO();
         let h = null;
         u.load(
-          "/model/itachi.glb",
+          "/PORTFOLIO/model/itachi.glb",
           (m) => {
             (h = m.scene), s.add(h);
             const v = new Yr().setFromObject(h).getCenter(new B());
@@ -45520,11 +45520,11 @@ const eF = ({ isDarkMode: n }) => {
       )
     );
   },
-  tF = "/assets/kamui-spc2VBYg.jpg",
-  nF = "/assets/amaterasu-DXrEAWK1.webp",
-  iF = "/assets/madara-DNqfRvnI.png",
-  rF = "/assets/tsukuyomi-6ZoCOhaD.png",
-  sF = "/assets/rinnegan-12k8eFCA.png",
+  tF = "/PORTFOLIO/assets/kamui-spc2VBYg.jpg",
+  nF = "/PORTFOLIO/assets/amaterasu-DXrEAWK1.webp",
+  iF = "/PORTFOLIO/assets/madara-DNqfRvnI.png",
+  rF = "/PORTFOLIO/assets/tsukuyomi-6ZoCOhaD.png",
+  sF = "/PORTFOLIO/assets/rinnegan-12k8eFCA.png",
   Hx = [sF, nF, iF, rF, tF];
 function oF({ isDarkMode: n, cursorOpacity: e }) {
   const [t, i] = re.useState(0),
@@ -46218,7 +46218,7 @@ const aF = ({ isDarkMode: n }) =>
       )
     );
   },
-  wF = "/assets/my_img-De5Z8A05.jpg";
+  wF = "/PORTFOLIO/assets/my_img-De5Z8A05.jpg";
 function bF({ isDarkMode: n }) {
   const [e, t] = re.useState(!1),
     i = () => {
