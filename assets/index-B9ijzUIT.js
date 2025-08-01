@@ -45401,7 +45401,7 @@ const ZO = ({ isDarkMode: n }) => {
         const u = new tO();
         let h = null;
         u.load(
-          "/model/itachi.glb",
+          "/PORTFOLIO/model/itachi.glb",
           (m) => {
             (h = m.scene), s.add(h);
             const v = new jr().setFromObject(h).getCenter(new B());
