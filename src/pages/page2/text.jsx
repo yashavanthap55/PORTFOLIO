@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import './text.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import ShinyText from './ShinyText.jsx';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,18 +13,20 @@ function Text({ isDarkMode }) {
   const [isHovered, setIsHovered] = useState(false);
   const [mobile, setMobile] = useState(false);
 
+
+  
   useEffect(() => {
     const elements = ['.first', '.second', '.third'];
-    const initialColor = isDarkMode ? '#cccccc' : '#393737ff';
-    const scrollColor = isDarkMode ? '#1b1b1b' : '#cccccc';
+    const initialColor = isDarkMode ? '#cccccc' : '#1b1b1b';
+    const scrollColor = isDarkMode ? '#1b1b1b' : '#ccc';
 
     elements.forEach(selector => {
       gsap.set(selector, { color: initialColor });
       gsap.to(selector, {
         scrollTrigger: {
           trigger: selector,
-          start: "50% 0%",
-          end: "bottom -20%",
+          start: "50% 80%",
+          end: "bottom 40%",
           scrub: 5,
           onEnter: () => {
             gsap.to(selector, { color: scrollColor });
@@ -98,16 +99,16 @@ function Text({ isDarkMode }) {
 
   return (
     <div style={{ position: 'relative', zIndex: '8' }}>
-      <div className='text' data-scroll data-scroll-speed='-0.5' style={{ backgroundColor: isDarkMode ? '#1e1e1e' : '#1e1e1e' }}>
+      <div className='text' data-scroll data-scroll-speed='-0.2' style={{ backgroundColor: isDarkMode ? '#fff' : '#121212' }}>
         <div className="container">
           <h1 className='first'>
-             <ShinyText text=" &lt;&gt; I love coding." disabled={false} speed={2} className='custom-class' />
+            &lt;&gt; I love coding.
           </h1>
           <h1 className='second'>
-             <ShinyText text="I use my passion and skills to build interactive Webpages and gain experiences." disabled={false} speed={2} className='custom-class' />
+            I use my passion and skills to build interactive Webpages and gain experiences.
           </h1>
           <h1 className='third'>
-             <ShinyText text="I am very excited to learn new things. &lt;/&gt;" disabled={false} speed={2} className='custom-class' />
+            I am very excited to learn new things. &lt;/&gt;
           </h1>
         </div>
         <div
@@ -122,13 +123,13 @@ function Text({ isDarkMode }) {
       <div className="text2" data-scroll data-scroll-speed={mobile ? '' : '-0.5'} ref={textRef}>
         <div className="container">
           <h1 className='first' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={{ opacity: '0' }}>
-             <ShinyText text=" &lt;&gt; I love coding." disabled={false} speed={3} className='custom-class' />
+            &lt;&gt; I love coding.
           </h1>
           <h1 className='second' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={{ opacity: '0' }}>
-             <ShinyText text="I use my passion and skills to build interactive Webpages and gain experiences." disabled={false} speed={3} className='custom-class' />
+            I use my passion and skills to build interactive Webpages and gain experiences.
           </h1>
           <h1 className='third' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={{ opacity: '0' }}>
-             <ShinyText text="I am very excited to learn new things. &lt;/&gt;" disabled={false} speed={3} className='custom-class' />
+            I am very excited to learn new things. &lt;/&gt;
           </h1>
         </div>
       </div>
