@@ -45537,7 +45537,7 @@ const ZO = ({ isDarkMode: n }) => {
   JO = "/PORTFOLIO/assets/amaterasu-DXrEAWK1.webp",
   $O = "/PORTFOLIO/assets/madara-DNqfRvnI.png",
   eF = "/PORTFOLIO/assets/tsukuyomi-6ZoCOhaD.png",
-  tF = "/assets/rinnegan-12k8eFCA.png",
+  tF = "/PORTFOLIO/assets/rinnegan-12k8eFCA.png",
   zx = [tF, JO, $O, eF, QO];
 function nF({ isDarkMode: n, cursorOpacity: e }) {
   const [t, i] = ie.useState(0),
