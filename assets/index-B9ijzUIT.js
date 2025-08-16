@@ -45834,6 +45834,7 @@ const iF = ({ isDarkMode: n }) =>
   lF = "/PORTFOLIO/assets/item5-MS-89kXu.png",
   cF = "/PORTFOLIO/assets/item6-BcTO1hNA.png",
   uF = "/PORTFOLIO/assets/item7-mA_nhctK.png",
+  F = "/PORTFOLIO/assets/item8.jpg",
   Hx = [
     {
       src: rF,
@@ -45862,6 +45863,10 @@ const iF = ({ isDarkMode: n }) =>
     {
       src: uF,
       link: "https://yashavanthap55.github.io/PORTFOLIO/assets/item7-mA_nhctK.png",
+    },
+      {
+      src: F,
+      link: "https://yashavanthap55.github.io/PORTFOLIO/assets/item8.jpg",
     },
   ],
   hF = "/PORTFOLIO/assets/background_dark.jpg",
