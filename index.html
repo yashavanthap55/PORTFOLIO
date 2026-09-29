@@ -3,7 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./assets/favicon-CSm0o0hc.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/PORTFOLIO/assets/favicon-CSm0o0hc.png" type="image/x-icon">
+    <!-- Single Page Apps for GitHub Pages: restore the real URL that 404.html
+         encoded (https://github.com/rafgraph/spa-github-pages) so react-router
+         can render deep links / refreshes like /PORTFOLIO/about. -->
+    <script type="text/javascript">
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function (s) {
+            return s.replace(/~and~/g, '&');
+          }).join('?');
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location));
+    </script>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
    
@@ -17,8 +32,8 @@
         overflow: hidden;
       }
     </style>
-    <script type="module" crossorigin src="./assets/index-bLzCEL0T.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CQae1O52.css">
+    <script type="module" crossorigin src="/PORTFOLIO/assets/index-D1MvdMQP.js"></script>
+    <link rel="stylesheet" crossorigin href="/PORTFOLIO/assets/index-B-qe91Sj.css">
   </head>
   <body>
     <div id="root"></div>
